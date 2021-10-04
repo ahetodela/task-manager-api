@@ -20,7 +20,7 @@ const auth = async (req, res, next) => {
         req.user = user; //if the user exists, pass the user to the req so that the route handlers can have access to the user instead of having to fetch the user again which is redundant
         next();
     } catch (error) {
-        res.status(401).send({ error: "Please Authenticate yourself 🙄" });
+        res.status(401).send({ error: "Please Authenticate yourself" });
     }
 };
 
